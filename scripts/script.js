@@ -1,25 +1,4 @@
-class Producto {
-    constructor(id, nombre, precio, color, tamanio) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.color = color;
-        this.tamanio = tamanio;
-    }
-}
-class Compra {
-    constructor(nombre,precio) {
-        this.nombre = nombre;
-        this.cantidad=0;
-        this.precio=precio;
-    }
-    contar(){
-        this.cantidad+=1;
-    }
-    calcularTotal() {
-        this.precio *= this.cantidad;
-    }
-}
+
 const producto1 = new Producto(1, "Alfombra Catania", 2600, "crudo", "60x110cm")
 const producto2 = new Producto(2, "Alfombra Ciparicia", 16000, "rombo negro", "120x200cm")
 const producto3 = new Producto(3, "Alfombra Redonda", 7400, "crudo", "150cm")
@@ -34,7 +13,13 @@ let button2 = document.getElementById('btn2');
 let button3 = document.getElementById('btn3');
 let button4 = document.getElementById('btn4');
 
-const compras = new Array();
+const compras = [];
+
+// if(localStorage.getItem('Compra')) {
+//     compras = JSON.parse(localStorage.getItem('Compra'))
+// } else {
+//     localStorage.setItem('Compra', JSON.stringify(compras))
+// }
 
 compras[0] = new Compra("Alfombra Catania",2600);
 compras[1] = new Compra("Alfombra Ciparicia",16000);
@@ -56,7 +41,7 @@ buttonCarrito.addEventListener('click', ()=>{
                 <div class="card-body">
                     <p>Producto: ${productoSeleccionado.nombre} </p>
                     <p>Cantidad: ${productoSeleccionado.cantidad}</p>
-                    <p>Precio: ${productoSeleccionado.precio}</p>
+                    <p>Precio: ${productoSeleccionado.calcularTotal()}</p>
                 </div>
             </div>` 
         }
