@@ -72,6 +72,7 @@ buttonCarrito.addEventListener('click', () => {
                         }
                     })
                     localStorage.setItem('Compra', JSON.stringify(arrayStorage));
+                    compras=arrayStorage;
                     escuchadorDeBotones();
                 })
             }
