@@ -19,9 +19,9 @@ compras[1] = new Compra("Alfombra Ciparicia", 16000);
 compras[2] = new Compra("Alfombra Redonda", 7400);
 compras[3] = new Compra("Alfombra Berlina", 5600);
 
+
 if (localStorage.getItem('Compra')) {
     compras = JSON.parse(localStorage.getItem('Compra'))
-    console.log(compras)
 } else {
     localStorage.setItem('Compra', JSON.stringify(compras))
 }
@@ -33,29 +33,33 @@ button4.onclick = () => (compras[3].cantidad++, localStorage.setItem('Compra', J
 
 
 buttonCarrito.addEventListener('click', () => {
-
+    let totalCarrito=0
     let arrayStorage = JSON.parse(localStorage.getItem('Compra'));
     divCarrito.innerHTML = ""
     arrayStorage.forEach((productoSeleccionado, indice) => {
+        let{nombre,cantidad,precio}=productoSeleccionado;
+
         if (productoSeleccionado.cantidad != 0) {
+            totalCarrito += calcularTotal(precio,cantidad);
             divCarrito.innerHTML += ` 
             <div class="card" id="producto${indice}" style="width: 18rem;">
                 <div class="card-body">
-                    <p>Producto: ${productoSeleccionado.nombre} </p>
-                    <p>Cantidad: ${productoSeleccionado.cantidad}</p>
-                    <p>Precio: ${calcularTotal(productoSeleccionado.precio, productoSeleccionado.cantidad)}</p>
+                    <p>Producto: ${nombre} </p>
+                    <p>Cantidad: ${cantidad}</p>
+                    <p>Precio: ${calcularTotal(precio, cantidad)}</p>
                     <button id="boton${indice}" class="btn btn-danger">Eliminar</button>
                 </div>
             </div>`
 
         }
     })
+    
     function escuchadorDeBotones() {
         arrayStorage.forEach((productoSeleccionado, indice) => {
             if (productoSeleccionado.cantidad > 0) {
-                console.log(productoSeleccionado)
                 document.getElementById(`boton${indice}`).addEventListener('click', () => {
-                    productoSeleccionado.cantidad -= 1;
+                    productoSeleccionado.cantidad --;
+                    totalCarrito -= productoSeleccionado.precio;
                     divCarrito.innerHTML = ""
                     arrayStorage.forEach((productoSeleccionado, indice) => {
                         if (productoSeleccionado.cantidad != 0) {
@@ -73,12 +77,14 @@ buttonCarrito.addEventListener('click', () => {
                     })
                     localStorage.setItem('Compra', JSON.stringify(arrayStorage));
                     compras=arrayStorage;
+                    totalCarrito > 0 ? divCarrito.innerHTML += `<p> El precio total es: ${totalCarrito}</p>` :  divCarrito.innerHTML = `<p class="mt-2 text-secondary"> El carrito está vacío</p>`;
                     escuchadorDeBotones();
                 })
             }
 
         })
     }
-
+    totalCarrito > 0 ? divCarrito.innerHTML += `<p> El precio total es: ${totalCarrito}</p>` :  divCarrito.innerHTML = `<p class="mt-2 text-secondary"> El carrito está vacío</p>`;
+   
     escuchadorDeBotones()
 })
