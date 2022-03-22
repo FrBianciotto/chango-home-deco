@@ -38,12 +38,8 @@ compras[1] = new Compra("Alfombra Ciparicia", 16000);
 compras[2] = new Compra("Alfombra Redonda", 7400);
 compras[3] = new Compra("Alfombra Berlina", 5600);
 
+localStorage.getItem('Compra') ? compras = JSON.parse(localStorage.getItem('Compra')) : localStorage.setItem('Compra', JSON.stringify(compras));
 
-if (localStorage.getItem('Compra')) {
-    compras = JSON.parse(localStorage.getItem('Compra'))
-} else {
-    localStorage.setItem('Compra', JSON.stringify(compras))
-}
 button1.onclick = () => {compras[0].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras))};
 button2.onclick = () => {compras[1].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras))};
 button3.onclick = () => {compras[2].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras))};
@@ -52,9 +48,8 @@ button4.onclick = () => {compras[3].cantidad++; localStorage.setItem('Compra', J
 
 buttonCarrito.addEventListener('click', () => {
     let totalCarrito=0
-    let arrayStorage = JSON.parse(localStorage.getItem('Compra'));
-    divCarrito.innerHTML = ""
-    arrayStorage.forEach((productoSeleccionado, indice) => {
+    divCarrito.innerHTML = "";
+    compras.forEach((productoSeleccionado, indice) => {
         let{nombre,cantidad,precio}=productoSeleccionado;
 
         if (productoSeleccionado.cantidad != 0) {
@@ -75,17 +70,17 @@ buttonCarrito.addEventListener('click', () => {
     
     totalCarrito > 0 ? divCarrito.innerHTML += `<p> El precio total es: ${totalCarrito}</p>` :  carroVacío();
    
-    escuchadorDeBotones(arrayStorage, totalCarrito);
+    escuchadorDeBotones(compras, totalCarrito);
 })
 
-function escuchadorDeBotones(arrayStorage, totalCarrito) {
-    arrayStorage.forEach((productoSeleccionado, indice) => {
+function escuchadorDeBotones(compras, totalCarrito) {
+    compras.forEach((productoSeleccionado, indice) => {
         if (productoSeleccionado.cantidad > 0) {
             document.getElementById(`boton${indice}`).addEventListener('click', () => {
                 productoSeleccionado.cantidad --;
                 totalCarrito -= productoSeleccionado.precio;
                 divCarrito.innerHTML = ""
-                arrayStorage.forEach((productoSeleccionado, indice) => {
+                compras.forEach((productoSeleccionado, indice) => {
                     if (productoSeleccionado.cantidad != 0) {
                         divCarrito.innerHTML += ` 
                       <div class="card" id="producto${indice}" style="width: 18rem;">
@@ -99,10 +94,9 @@ function escuchadorDeBotones(arrayStorage, totalCarrito) {
 
                     }
                 })
-                localStorage.setItem('Compra', JSON.stringify(arrayStorage));
-                compras=arrayStorage;
+                localStorage.setItem('Compra', JSON.stringify(compras));
                 totalCarrito > 0 ? divCarrito.innerHTML += `<p> El precio total es: ${totalCarrito}</p>` :  carroVacío();
-                escuchadorDeBotones(arrayStorage, totalCarrito);
+                escuchadorDeBotones(compras, totalCarrito);
             })
         }
 
@@ -115,5 +109,5 @@ function carroVacío() {
         text: 'Su carro está vacío',
         icon: 'info',
         confirmButtonText: 'Entendido'
-      })
+    })
 }
