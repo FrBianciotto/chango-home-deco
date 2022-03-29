@@ -18,8 +18,3 @@ class Compra {
     
 }
 
-
-const calcularTotal = function (precio, cantidad) {
-    let total = precio * cantidad;
-    return total;
-}

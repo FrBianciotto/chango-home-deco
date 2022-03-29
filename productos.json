@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alfombra Catania",
+        "precio": 2600,
+        "color": "crudo",
+        "tamanio": "60x110cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20210901_1433301-942d783746371f32a816305177177003-1024-1024.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Alfombra Ciparicia",
+        "precio": 16000,
+        "color": "rombos negros",
+        "tamanio": "120x200cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20210901_1642151-834f2ca185c47fdc9816305330689023-320-0.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Alfombra Redonda",
+        "precio": 7400,
+        "color": "crudo",
+        "tamanio": "150cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/inshot_20210901_1429070661-9f2d2d656783f28f4916305174501061-320-0.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Alfombra Berlina",
+        "precio": "5600",
+        "color": "lineas grises",
+        "tamanio": "90x110cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/inshot_20210602_004027557-021-660a7b1d89031ca84b16305197621548-320-0.jpeg"
+    }
+    
+]
