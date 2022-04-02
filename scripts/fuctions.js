@@ -1,12 +1,15 @@
+//Trae los productos desde el JSON 
 async function cargarProductos(){
     let promesa = await fetch('productos.json')
     let productosJSON = await promesa.json()
     return productosJSON    
 }
+
 const calcularTotal = function (precio, cantidad) {
     let total = precio * cantidad;
     return total;
 }
+
 //Funcion que se encarga de eliminar los productos del carrito
 function eliminarProductos(compras, totalCarrito) {
     compras.forEach((productoSeleccionado, indice) => {

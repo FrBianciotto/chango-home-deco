@@ -9,16 +9,16 @@
 
 let productos = cargarProductos();
 productos.then( data => {
-    data.forEach((p) => {
+    data.forEach((p,i) => {
         divProductos.innerHTML += `
-            <div id="producto${p.id}" class="card" style="width: 18rem;">
-                    <img src="${p.imagen}" class="card-img-top"  alt="...">
+            <div id="producto${p.id}" class="card mt-2" style="width: 18rem;">
+                    <img src="${p.imagen}" class="card-img-top mt-2"  alt="...">
                         <div class="card-body">
                         <h5 class="card-title">${p.nombre}</h5>
                         <p class="card-text">Color: ${p.color}.</p>
                         <p class="card-text">Tamaño: ${p.tamanio}.</p>
                         <p class="card-text">Precio: $${p.precio}.</p>
-                        <button id="btn${p.id}" href="#" class="btn btn-primary">Añadir al carrito</button>
+                        <button onclick="sumarProducto(${i})"id="btn${p.id}" href="#" class="btn btn-primary">Añadir al carrito</button>
                     </div>
             </div>
 
@@ -30,12 +30,12 @@ productos.then( data => {
 let buttonCarrito = document.getElementById('mostrarCarrito');
 let divCarrito = document.getElementById('carrito');
 let divProductos = document.getElementById('productos');
-let button1 = document.getElementById('btn1');
-let button2 = document.getElementById('btn2');
-let button3 = document.getElementById('btn3');
-let button4 = document.getElementById('btn4');
+// let button1 = document.getElementById('btn1');
+// let button2 = document.getElementById('btn2');
+// let button3 = document.getElementById('btn3');
+// let button4 = document.getElementById('btn4');
 
-console.log(button1)
+
 //Carga de las cards de productos en el DOM
 // for (let p of productos) {
 
@@ -54,6 +54,10 @@ console.log(button1)
 //     `
 // }
 
+function sumarProducto(indice) { 
+    compras[indice].cantidad++; 
+    localStorage.setItem('Compra', JSON.stringify(compras)) 
+};
 
 
 
@@ -66,10 +70,10 @@ compras[3] = new Compra("Alfombra Berlina", 5600);
 //Trae datos del storage o los carga
 localStorage.getItem('Compra') ? compras = JSON.parse(localStorage.getItem('Compra')) : localStorage.setItem('Compra', JSON.stringify(compras));
 
-button1.onclick = () => { compras[0].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
-button2.onclick = () => { compras[1].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
-button3.onclick = () => { compras[2].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
-button4.onclick = () => { compras[3].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
+// button1.onclick = () => { compras[0].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
+// button2.onclick = () => { compras[1].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
+// button3.onclick = () => { compras[2].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
+// button4.onclick = () => { compras[3].cantidad++; localStorage.setItem('Compra', JSON.stringify(compras)) };
 
 //Muestra los productos cargadon en el carrito 
 buttonCarrito.addEventListener('click', () => {
