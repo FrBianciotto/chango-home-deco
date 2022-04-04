@@ -15,6 +15,13 @@
     height: 300px;
     width: auto;
 }
+.productos{
+    margin: 10rem;
+}
+.card-producto{
+    width: 18rem;
+    margin: 5px;
+}
 .img-carrito{
     width: 25px;    
     height: auto;

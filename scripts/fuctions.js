@@ -5,15 +5,25 @@ async function cargarProductos(){
     return productosJSON    
 }
 
+//funcion para cargar el array del carrito con los objetos compra
+function cargaCarrito(productos, compra){
+    productos.forEach((producto,indice)=>{
+        let { nombre, precio } = producto;
+        compra[indice]=new Compra(nombre,precio);
+    })  
+}
+
 const calcularTotal = function (precio, cantidad) {
     let total = precio * cantidad;
     return total;
 }
+
 //suma productos y los carga en el JSON, funcion llamada por el evento click de los botones de productos
 function sumarProducto(indice) { 
     compras[--indice].cantidad++; 
     localStorage.setItem('Compra', JSON.stringify(compras)) 
 };
+
 //Funcion que se encarga de eliminar los productos del carrito
 function eliminarProductos(compras, totalCarrito) {
     compras.forEach((productoSeleccionado, indice) => {

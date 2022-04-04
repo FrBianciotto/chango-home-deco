@@ -30,6 +30,102 @@
         "color": "lineas grises",
         "tamanio": "90x110cm",
         "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/inshot_20210602_004027557-021-660a7b1d89031ca84b16305197621548-320-0.jpeg"
+    },
+    {
+        "id": 5,
+        "nombre": "Alfombra Kolkacha",
+        "precio": "3910",
+        "color": "fibras naturales",
+        "tamanio": "60x40cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20201106_182342-011-4141ae1006275f147116051913459320-1024-1024.jpeg"
+    },
+    {
+        "id": 6,
+        "nombre": "Alfombra Bombal",
+        "precio": "5100",
+        "color": "fibras naturales",
+        "tamanio": "60cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/0001-6986680764_20210831_134137_0000-011-f87df3fe12ddb1d1ee16305242054452-1024-1024.jpeg"
+    },
+    {
+        "id": 7,
+        "nombre": "Alfombra Terranova",
+        "precio": "12800",
+        "color": "fibras naturales",
+        "tamanio": "70x120cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20200612_11410911-e1ee51255248814dad15965630605388-1024-1024.jpg"
+    },    
+    {
+        "id": 8,
+        "nombre": "Alfombra Moscú",
+        "precio": "6070",
+        "color": "crudo y chocolate",
+        "tamanio": "60x90cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20210901_1431421-b664edf6df2c6754ed16305175650033-1024-1024.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Mesa Rodaja",
+        "precio": "20000",
+        "color": "Madera",
+        "tamanio": "45cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20211213_143024-04-021-b0ef547c9519c081c716394255989028-1024-1024.jpeg"
+    },
+    {
+        "id": 10,
+        "nombre": "Bancos de Álamo",
+        "precio": "12950",
+        "color": "Madera",
+        "tamanio": "140x28x45cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20210901_162718-011-f87c838ec96b83395f16305256633349-1024-1024.jpeg"
+    },
+    {
+        "id": 11,
+        "nombre": "Perchero Nórdico de pie",
+        "precio": "9400",
+        "color": "Madera",
+        "tamanio": "180x50cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/inshot_20201001_134315891-03-0111-6fc4f42121c500314916015740303361-1024-1024.jpeg"
+    },
+    {
+        "id": 12,
+        "nombre": "Perchero Nórdico de pared",
+        "precio": "6750",
+        "color": "Madera",
+        "tamanio": "60x40cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/inshot_20201001_141046163-041-8558afe48850345d5616015738905934-1024-1024.jpeg"
+    },
+    {
+        "id": 13,
+        "nombre": "Perchero Simple",
+        "precio": "3500",
+        "color": "Madera",
+        "tamanio": "60cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20201103_145637-011-4aa4bb7ce363c8c58216070083526741-1024-1024.jpeg"
+    },
+    {
+        "id": 14,
+        "nombre": "Mesa Petite de Álamo",
+        "precio": "16700",
+        "color": "Madera",
+        "tamanio": "83x50x45cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/inshot_20211029_1549497201-3121cab05132ca857b16355335242646-1024-1024.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Bandejas Gericht",
+        "precio": "4700",
+        "color": "Madera",
+        "tamanio": "30cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20210610_16425611-aaf04745a67a6ca63116234457713751-1024-1024.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Cuencos Holz",
+        "precio": "2250",
+        "color": "Madera",
+        "tamanio": "14x4,5cm",
+        "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/293/182/products/img_20210610_1706181-5c8649d97041d1671d16234442177431-1024-1024.jpg"
     }
     
 ]
