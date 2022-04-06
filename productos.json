@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "tipo":"alfombra",
         "nombre": "Alfombra Catania",
         "precio": 2600,
         "color": "crudo",
@@ -9,6 +10,7 @@
     },
     {
         "id": 2,
+        "tipo":"alfombra",
         "nombre": "Alfombra Ciparicia",
         "precio": 16000,
         "color": "rombos negros",
@@ -17,6 +19,7 @@
     },
     {
         "id": 3,
+        "tipo":"alfombra",
         "nombre": "Alfombra Redonda",
         "precio": 7400,
         "color": "crudo",
@@ -25,6 +28,7 @@
     },
     {
         "id": 4,
+        "tipo":"alfombra",
         "nombre": "Alfombra Berlina",
         "precio": "5600",
         "color": "lineas grises",
@@ -33,6 +37,7 @@
     },
     {
         "id": 5,
+        "tipo":"alfombra",
         "nombre": "Alfombra Kolkacha",
         "precio": "3910",
         "color": "fibras naturales",
@@ -41,6 +46,7 @@
     },
     {
         "id": 6,
+        "tipo":"alfombra",
         "nombre": "Alfombra Bombal",
         "precio": "5100",
         "color": "fibras naturales",
@@ -49,6 +55,7 @@
     },
     {
         "id": 7,
+        "tipo":"alfombra",
         "nombre": "Alfombra Terranova",
         "precio": "12800",
         "color": "fibras naturales",
@@ -57,6 +64,7 @@
     },    
     {
         "id": 8,
+        "tipo":"alfombra",
         "nombre": "Alfombra Moscú",
         "precio": "6070",
         "color": "crudo y chocolate",
@@ -65,6 +73,7 @@
     },
     {
         "id": 9,
+        "tipo":"madera",
         "nombre": "Mesa Rodaja",
         "precio": "20000",
         "color": "Madera",
@@ -73,6 +82,7 @@
     },
     {
         "id": 10,
+        "tipo":"madera",
         "nombre": "Bancos de Álamo",
         "precio": "12950",
         "color": "Madera",
@@ -81,6 +91,7 @@
     },
     {
         "id": 11,
+        "tipo":"madera",
         "nombre": "Perchero Nórdico de pie",
         "precio": "9400",
         "color": "Madera",
@@ -89,6 +100,7 @@
     },
     {
         "id": 12,
+        "tipo":"madera",
         "nombre": "Perchero Nórdico de pared",
         "precio": "6750",
         "color": "Madera",
@@ -97,6 +109,7 @@
     },
     {
         "id": 13,
+        "tipo":"madera",
         "nombre": "Perchero Simple",
         "precio": "3500",
         "color": "Madera",
@@ -105,6 +118,7 @@
     },
     {
         "id": 14,
+        "tipo":"madera",
         "nombre": "Mesa Petite de Álamo",
         "precio": "16700",
         "color": "Madera",
@@ -113,6 +127,7 @@
     },
     {
         "id": 15,
+        "tipo":"madera",
         "nombre": "Bandejas Gericht",
         "precio": "4700",
         "color": "Madera",
@@ -121,6 +136,7 @@
     },
     {
         "id": 16,
+        "tipo":"madera",
         "nombre": "Cuencos Holz",
         "precio": "2250",
         "color": "Madera",

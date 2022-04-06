@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://bootswatch.com/5/journal/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- My Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Chango Home Deco</title>
+</head>
+
+<body>
+    <div class="body">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../images/logo-chango.png" alt="Logo de Chango"
+                        class="img-fluid logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quienes somos</a>
+                        </li>
+                    
+                        <!-- Button trigger modal -->
+                        <button id="mostrarCarrito" type="button" class="btn btn-link" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <img src="../images/shopping-cart.png" alt="carrito" class="img-carrito">
+                        </button>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="mt-4">
+            <h1 class="titulo-secciones">PRODUCTOS</h1>
+            <div class="seccion-productos row d-flex">
+                <div class="categorias col-md-2 ">
+                    <h4>Categorias</h4>
+                    <a href="./productos.html">Todos</a>
+                    <a href="#" id="alfombras">Alfombras</a>
+                    <a href="#" id="madera">Madera</a>
+                </div>
+                <div id="productos" class="row justify-content-around productos col-md-10">
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class=" modal-dialog modal-dialog-centered">
+                    <div  class="modal-content carrito">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Su Carro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div id="carrito" class="modal-body">
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" href="#">Finalizar compra</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+        <footer class="footer page-footer font-small text-primary mt-2">
+
+            <!-- Copyright -->
+            <div class="text-center py-3">©
+                <script>
+                    let currentYear = new Date().getFullYear();
+                    document.write(currentYear);
+                </script> Copyright: Chango Home-Deco | Todos los derechos reservados
+            </div>
+
+
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/Clases.js"></script>
+    <script src="../scripts/fuctions.js"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
