@@ -12,10 +12,6 @@
     width: auto;
 }
 
-.footer{
-    background-color: #e8e0d6;
-}
-
 /*Estilos index*/
 .span p{
     margin-right: 10px;
@@ -63,7 +59,7 @@
     width: auto;
 }
 .card-producto{
-    width: 18rem;
+    width: 20rem;
     margin: 5px;
 }
 .img-carrito{
@@ -74,3 +70,29 @@
     padding: 20px;
     border: #EEE8E1;
 }
+.img-nosotros{
+    width: 300px;
+    height: auto;
+}
+
+.footer{
+    margin: 10px, 0px  ;
+    padding: 10px;
+    background-color: #dcd0c0;
+}
+.footer div {
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+}
+.footer div a{
+    text-decoration: none;
+    color: black;
+}
+.footer div li{
+    list-style: none;
+    margin-left: 15px;
+ }
+ .footer2{
+     background-color: #EEE8E1;
+ }
