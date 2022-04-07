@@ -53,7 +53,17 @@ const calcularTotal = function (precio, cantidad) {
 //suma productos y los carga en el JSON, funcion llamada por el evento click de los botones de productos
 function sumarProducto(indice) { 
     compras[--indice].cantidad++; 
-    localStorage.setItem('Compra', JSON.stringify(compras)) 
+    localStorage.setItem('Compra', JSON.stringify(compras))
+    Toastify({
+        text: "Producto cargado",
+        className: "info",
+        duration: 1500,
+        gravity: "bottom",
+        style: {
+          background: "white",
+          color: "#c85855"
+        }
+      }).showToast();
 };
 
 //Funcion que se encarga de eliminar los productos del carrito
