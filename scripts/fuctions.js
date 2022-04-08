@@ -5,18 +5,11 @@ async function cargarProductos(){
     return productosJSON    
 }
 
-//funcion para cargar el array del carrito con los objetos compra
-function cargaCarrito(productos, compra){
-    productos.forEach((producto,indice)=>{
-        let { nombre, precio } = producto;
-        compra[indice]=new Compra(nombre,precio);
-    })  
-}
 
 let cargarHTML = (arrayTipo) => {
     divProductos.innerHTML = "";
     arrayTipo.forEach((p) => {
-        //Carga de todas las cards en la seccion
+        //Carga de todas las cards en la seccion productos
         divProductos.innerHTML += `
             <div id="producto${p.id}" class="card card-producto mt-2 col-md-3" >
                     <img src="${p.imagen}" class="card-img-top mt-2"  alt="...">

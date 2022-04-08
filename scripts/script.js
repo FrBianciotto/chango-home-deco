@@ -10,9 +10,9 @@ let compras = [];
 let productos = cargarProductos();
 
 productos.then(data => {
-    cargarHTML(data)
+    cargarHTML(data);
     data.forEach((p, indice) => {
-        //Carga del objeto compra que va a contener el carrito    
+        //Carga de compras, array de objetos, que va a contener el carrito   
         compras[indice] = new Compra(p.nombre, p.precio, p.imagen)
     });
 
@@ -27,7 +27,7 @@ productos.then(data => {
 })
 
 
-//Muestra los productos cargadon en el carrito 
+//Muestra los productos cargados en el carrito 
 buttonCarrito.addEventListener('click', () => {
     let totalCarrito = 0
     divCarrito.innerHTML = "";
